@@ -17,43 +17,45 @@ public class MainActivity extends AppCompatActivity {
 
 	@Override
 	protected void onStart() {
+		Toast.makeText(this, "App On Start", Toast.LENGTH_SHORT).show();
 		super.onStart();
-		Toast.makeText(this, "App on Start",Toast.LENGTH_SHORT).show();
 	}
-
-
 
 	// TODO: tambahkan callback onStop() di sini
 
 	@Override
 	protected void onStop() {
+		Toast.makeText(this, "App On Stop", Toast.LENGTH_SHORT).show();
 		super.onStop();
-		Toast.makeText(this, "App on Stop",Toast.LENGTH_SHORT).show();
 	}
 
 	// TODO: lengkapi callback untuk onRestart() onResume() onPause() onDestroy()
 
-	@Override
-	protected void onRestart() {
-		super.onRestart();
-		Toast.makeText( this, "App on Restart",Toast.LENGTH_SHORT).show();
-	}
 
 	@Override
-	protected void onResume() {
-		super.onResume();
-		Toast.makeText(this, "App on Resume",Toast.LENGTH_SHORT).show();
+	protected void onDestroy() {
+		Toast.makeText(this, "App On Destroy", Toast.LENGTH_SHORT).show();
+		super.onDestroy();
 	}
 
 	@Override
 	protected void onPause() {
+		Toast.makeText(this, "App On Pause", Toast.LENGTH_SHORT).show();
 		super.onPause();
-		Toast.makeText(this, "App on Pause",Toast.LENGTH_SHORT).show();
 	}
 
 	@Override
-	protected void onDestroy() {
-		super.onDestroy();
-		Toast.makeText(this, "App on Destroy",Toast.LENGTH_SHORT).show();
+	protected void onRestart() {
+		Toast.makeText(this, "App On Restart", Toast.LENGTH_SHORT).show();
+		super.onRestart();
 	}
+
+
+	@Override
+	protected void onResume() {
+		Toast.makeText(this, "App On Resume", Toast.LENGTH_SHORT).show();
+		super.onResume();
+	}
+
+
 }
